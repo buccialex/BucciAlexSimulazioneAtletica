@@ -27,7 +27,7 @@ public abstract class Atleta {
     /**
      * metodo calcola punteggio da definire nelle sottoclassi
      */
-    public abstract int calcolaPunteggio();
+    public abstract double calcolaPunteggio();
 
     public String getNome() {
         return nome;

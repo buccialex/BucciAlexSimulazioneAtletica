@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package buccialexsimulazioneatletica;
-
+import java.util.*;
 /**
  *
  * @author bucci.alex
  */
-public class Velocista extends Atleta{
+public class Velocista extends Atleta implements iCasualita{
     /**
      * attributi
      */
@@ -18,21 +18,27 @@ public class Velocista extends Atleta{
      * costruttore di velocista
      * @param nome nome del velocista
      * @param cognome cognome del velocista
-     * @param velocita velocità del velocista
      */
-    public Velocista(String nome, String cognome, int velocita){
+    public Velocista(String nome, String cognome){
         super(nome, cognome);
-        this.velocita = velocita;
     }
 
    
     
     /**
      * override del metodo della superclasse "calcolaPunteggio"
+     * @return punteggio in secondi del velocista
      */
      @Override
-    public int calcolaPunteggio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double calcolaPunteggio() {
+        Random r = new Random();
+        return 15 - ((double)this.velocita / 100.0) * 15 - 9.57;
+    }
+
+    @Override
+    public void generaValoreCasuale() {
+        Random r = new Random();
+        this.velocita = r.nextInt(101);
     }
         
     

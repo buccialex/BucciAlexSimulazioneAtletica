@@ -19,9 +19,13 @@ public class Gara {
     
     /**
      * costruttore di gara
+     * @param durata durata della gara
+     * @param tipologia tipologia della gara
      */
-    public Gara(){
+    public Gara(int durata, String tipologia){
         listaAtleti = new ArrayList<>();
+        this.durata = durata;
+        this.tipologia = tipologia;
     }
     
     public void svolgiGara(){

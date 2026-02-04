@@ -18,8 +18,8 @@ public class Meeting {
         listaGare = new ArrayList<>();
     }
     
-    public void creaGara(int durataGara){
-        
+    public void creaGara(int durataGara, String tipologia){
+        listaGare.add(new Gara(durataGara, tipologia));  
     }
 
     public ArrayList<Gara> getListaGare() {

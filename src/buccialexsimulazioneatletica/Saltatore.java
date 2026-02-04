@@ -8,38 +8,35 @@ import java.util.*;
  *
  * @author bucci.alex
  */
-public class Lanciatore extends Atleta implements iCasualita{
-
+public class Saltatore extends Atleta implements iCasualita{
     /**
      * attributi
      */
-    private int forza;
-    
+    private int potenzaSalto;
+
     /**
-     * costruttore di lanciatore
-     * @param nome nome del lanciatore
-     * @param cognome cognome del lanciatore
+     * costruttore di saltatore
+     * @param nome nome del saltatore
+     * @param cognome cognome del saltatore
      */
-    public Lanciatore(String nome, String cognome){
+    public Saltatore(String nome, String cognome) {
         super(nome, cognome);
     }
 
-    
-    
     /**
-     * override del metodo della super classe "calcolaPunteggio"
+     * override del metodo calcola punteggio della superclasse astratta
+     * @return il punteggio dell'attleta
      */
     @Override
     public double calcolaPunteggio() {
-        return 6.00 + ((double)this.forza/100)*(23.57 - 6.00);
+        return 4.50 + ((double)this.potenzaSalto/ 100.0) * (8.96 - 4.50);
     }
 
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();
-        this.forza = r.nextInt(101);
+        potenzaSalto = r.nextInt(101);
     }
-    
     
     
 }
