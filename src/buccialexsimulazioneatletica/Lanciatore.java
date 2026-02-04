@@ -10,13 +10,29 @@ package buccialexsimulazioneatletica;
  */
 public class Lanciatore extends Atleta {
 
-    public Lanciatore(String nome){
-        super(nome);
+    /**
+     * attributi
+     */
+    private int forza;
+    
+    /**
+     * costruttore di lanciatore
+     * @param nome nome del lanciatore
+     * @param cognome cognome del lanciatore
+     * @param forza forza del lanciatore
+     */
+    public Lanciatore(String nome, String cognome, int forza){
+        super(nome, cognome);
+        this.forza = forza;
     }
+
     
     
+    /**
+     * override del metodo della super classe "calcolaPunteggio"
+     */
     @Override
-    public void calcolaPunteggio() {
+    public int calcolaPunteggio() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

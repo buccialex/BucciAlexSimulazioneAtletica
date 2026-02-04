@@ -9,6 +9,9 @@ import java.util.*;
  * @author goretti.leonardo
  */
 public class Meeting {
+    /**
+     * attributi
+     */
     private ArrayList<Gara> listaGare;
     
     public Meeting(){
