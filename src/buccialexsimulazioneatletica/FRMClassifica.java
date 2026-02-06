@@ -30,18 +30,29 @@ public class FRMClassifica extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         TXTClassifica = new javax.swing.JTextArea();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Classifica gara");
         setMinimumSize(new java.awt.Dimension(800, 400));
-        getContentPane().setLayout(null);
 
         TXTClassifica.setColumns(20);
         TXTClassifica.setRows(5);
         jScrollPane1.setViewportView(TXTClassifica);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 20, 750, 270);
+        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel2.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Classifica");
+        jPanel2.add(jLabel2);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -73,6 +84,8 @@ public class FRMClassifica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea TXTClassifica;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

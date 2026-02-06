@@ -4,12 +4,14 @@
  */
 package buccialexsimulazioneatletica;
 
+import java.awt.HeadlessException;
+
 /**
  *
  * @author goretti.leonardo
  */
 public class FRMGara extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FRMGara.class.getName());
 
     /**
@@ -17,6 +19,7 @@ public class FRMGara extends javax.swing.JFrame {
      */
     public FRMGara() {
         initComponents();
+
     }
 
     /**
@@ -29,17 +32,18 @@ public class FRMGara extends javax.swing.JFrame {
     private void initComponents() {
 
         LSTGare = new javax.swing.JList<>();
-        LBLInserisciGara = new javax.swing.JLabel();
-        TXTInserisciGara = new javax.swing.JTextField();
-        BTNInviaGara = new javax.swing.JButton();
-        LBLNumGiocatori = new javax.swing.JLabel();
-        TXTNumAtleti = new javax.swing.JTextField();
-        BTNnumAtleti = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        cbTipo = new javax.swing.JComboBox<>();
+        txtDurata = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btnCreaGara = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestione gara");
         setMinimumSize(new java.awt.Dimension(800, 300));
-        getContentPane().setLayout(null);
 
         LSTGare.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         LSTGare.setModel(new javax.swing.AbstractListModel<String>() {
@@ -47,64 +51,135 @@ public class FRMGara extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        getContentPane().add(LSTGare);
-        LSTGare.setBounds(26, 17, 207, 110);
+        LSTGare.setEnabled(false);
+        getContentPane().add(LSTGare, java.awt.BorderLayout.CENTER);
 
-        LBLInserisciGara.setText("Inserisci gara:");
-        getContentPane().add(LBLInserisciGara);
-        LBLInserisciGara.setBounds(251, 19, 71, 16);
-        getContentPane().add(TXTInserisciGara);
-        TXTInserisciGara.setBounds(340, 10, 158, 26);
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        BTNInviaGara.setText("Invia Gara");
-        getContentPane().add(BTNInviaGara);
-        BTNInviaGara.setBounds(510, 10, 86, 27);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Simulatore meeting atletica");
+        jPanel1.add(jLabel1);
 
-        LBLNumGiocatori.setText("Inserisci numero atleti:");
-        getContentPane().add(LBLNumGiocatori);
-        LBLNumGiocatori.setBounds(250, 110, 120, 16);
-        getContentPane().add(TXTNumAtleti);
-        TXTNumAtleti.setBounds(380, 100, 158, 26);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        BTNnumAtleti.setText("Invia Atleti");
-        getContentPane().add(BTNnumAtleti);
-        BTNnumAtleti.setBounds(550, 100, 90, 27);
+        jLabel2.setText("Seleziona tipo di gara");
+
+        cbTipo.setMaximumRowCount(5);
+        cbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleziona ", "Atletica 100m", "Lancio del peso", "Salto in lungo", "Lancio del giavellotto", "Maratona" }));
+        cbTipo.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 204)));
+        cbTipo.setPreferredSize(new java.awt.Dimension(150, 22));
+
+        jLabel3.setText("Inserire la durata (h,min,sec)");
+
+        btnCreaGara.setText("Conferma");
+        btnCreaGara.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreaGaraActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDurata, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(185, 185, 185))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(btnCreaGara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(154, 154, 154))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtDurata, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addComponent(btnCreaGara, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(48, 48, 48))
+        );
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    private void btnCreaGaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreaGaraActionPerformed
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+            if("Seleziona".equals(cbTipo.getSelectedItem())){
+                javax.swing.JOptionPane.showMessageDialog(this,
+                        "Scegli un tipo di gara valido",
+                        "Attenzione",
+                        javax.swing.JOptionPane.WARNING_MESSAGE);
+                return;
             }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+            if (txtDurata.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(this,
+                        "Inserisci un valore per la durata!",
+                        "Attenzione",
+                        javax.swing.JOptionPane.WARNING_MESSAGE);
+                return; // Esce dal metodo senza fare nulla
+            }
+            if (cbTipo.getSelectedItem() == null) {
+                javax.swing.JOptionPane.showMessageDialog(this,
+                        "Seleziona un tipo di gara!",
+                        "Attenzione",
+                        javax.swing.JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            float durata = Float.parseFloat(txtDurata.getText());
+            String tipo = cbTipo.getSelectedItem().toString();
+            m.creaGara(durata, tipo);
+            javax.swing.JOptionPane.showMessageDialog(this,
+                    "Gara creata con successo!",
+                    "Info",
+                    javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        } catch (NumberFormatException e) {
+            // SCATTA SE: L'utente scrive "abc" o "12,5" (con virgola invece di punto)
+            javax.swing.JOptionPane.showMessageDialog(this,
+                    "Errore: La durata deve essere un numero valido (usa il punto per i decimali).",
+                    "Errore di Formato",
+                    javax.swing.JOptionPane.ERROR_MESSAGE);
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new FRMGara().setVisible(true));
-    }
+        } catch (HeadlessException e) {
+            // SCATTA SE: C'è un errore generico non previsto
+            javax.swing.JOptionPane.showMessageDialog(this,
+                    "Si è verificato un errore imprevisto: " + e.getMessage(),
+                    "Errore",
+                    javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_btnCreaGaraActionPerformed
+
+    Meeting m = new Meeting();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNInviaGara;
-    private javax.swing.JButton BTNnumAtleti;
-    private javax.swing.JLabel LBLInserisciGara;
-    private javax.swing.JLabel LBLNumGiocatori;
     private javax.swing.JList<String> LSTGare;
-    private javax.swing.JTextField TXTInserisciGara;
-    private javax.swing.JTextField TXTNumAtleti;
+    private javax.swing.JButton btnCreaGara;
+    private javax.swing.JComboBox<String> cbTipo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField txtDurata;
     // End of variables declaration//GEN-END:variables
 }

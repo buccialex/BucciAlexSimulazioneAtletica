@@ -2,14 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< Updated upstream
         <group>
-            <file>file:/C:/Users/goretti.leonardo/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/FRMGara.java</file>
-            <file>file:/C:/Users/goretti.leonardo/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/FRMAtleti.java</file>
-            <file>file:/C:/Users/goretti.leonardo/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/FRMClassifica.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/FRMGara.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/Gara.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/iCasualita.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/BucciAlexSimulazioneAtletica.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/Meeting.java</file>
+            <file>file:/C:/Users/utente/Documents/GitHub/BucciAlexSimulazioneAtletica/src/buccialexsimulazioneatletica/Atleta.java</file>
         </group>
-=======
-        <group/>
->>>>>>> Stashed changes
     </open-files>
 </project-private>

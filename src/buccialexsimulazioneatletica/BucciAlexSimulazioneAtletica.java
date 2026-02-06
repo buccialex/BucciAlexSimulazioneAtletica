@@ -14,7 +14,8 @@ public class BucciAlexSimulazioneAtletica {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        FRMGara f1 = new FRMGara();
+        f1.setVisible(true);
     }
     
 }

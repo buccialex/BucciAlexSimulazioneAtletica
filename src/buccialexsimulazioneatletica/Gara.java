@@ -13,7 +13,7 @@ public class Gara {
      * attributi
      */
     private final ArrayList<Atleta> listaAtleti;
-    private int durata;
+    private Float durata;
     private String tipologia;
     private Atleta vincitore;
     
@@ -22,7 +22,7 @@ public class Gara {
      * @param durata durata della gara
      * @param tipologia tipologia della gara
      */
-    public Gara(int durata, String tipologia){
+    public Gara(Float durata, String tipologia){
         listaAtleti = new ArrayList<>();
         this.durata = durata;
         this.tipologia = tipologia;
@@ -32,11 +32,11 @@ public class Gara {
         
     }
 
-    public int getDurata() {
+    public double getDurata() {
         return durata;
     }
 
-    public void setDurata(int durata) {
+    public void setDurata(Float durata) {
         this.durata = durata;
     }
 

@@ -1,0 +1,741 @@
+Marcell,Jacobs,101,100m
+Usain,Bolt,958,100m
+Filippo,Tortu,102,100m
+Ryan,Crouser,223,Lancio del peso
+Eliud,Kipchoge,001,Maratona
+Joe,Kovacs,224,Lancio del peso
+Kelvin,Kiptum,002,Maratona
+Shelly-Ann,Fraser,103,100m
+Yemaneberhan,Crippa,003,Maratona
+Leonardo,Fabbri,225,Lancio del peso
+Elaine,Thompson,104,100m
+Zane,Weir,226,Lancio del peso
+Bashir,Abdi,004,Maratona
+Trayvon,Bromell,105,100m
+Tom,Walsh,227,Lancio del peso
+Eyob,Faniel,005,Maratona
+Andre,De Grasse,106,100m
+Jacko,Gill,228,Lancio del peso
+Kenenisa,Bekele,006,Maratona
+Fred,Kerley,107,100m
+Darlan,Romani,229,Lancio del peso
+Suguru,Osako,007,Maratona
+Christian,Coleman,108,100m
+Nick,Ponzio,230,Lancio del peso
+Mo,Farah,008,Maratona
+Noah,Lyles,109,100m
+Chukwuebuka,Enekwechi,231,Lancio del peso
+Galen,Rupp,009,Maratona
+Akani,Simbine,110,100m
+Armin,Sinancevic,232,Lancio del peso
+Sondre,Moen,010,Maratona
+Yohan,Blake,111,100m
+Filip,Mihaljevic,233,Lancio del peso
+Abdi,Nageeye,011,Maratona
+Zharnel,Hughes,112,100m
+Mesud,Pezer,234,Lancio del peso
+Daniele,Meucci,012,Maratona
+Reece,Prescod,113,100m
+Konrad,Bukowiecki,235,Lancio del peso
+Iliass,Aouani,013,Maratona
+Justin,Gatlin,114,100m
+Michal,Haratyk,236,Lancio del peso
+Yohanes,Chiappinelli,014,Maratona
+Jimmy,Vicaut,115,100m
+Mostafa,Hassan,237,Lancio del peso
+Nekagenet,Crippa,015,Maratona
+Arthur,Cisse,116,100m
+Bob,Bertemes,238,Lancio del peso
+Stefano,La Rosa,016,Maratona
+Rohan,Browning,117,100m
+Wictor,Petersson,239,Lancio del peso
+Giovanni,Grillo,017,Maratona
+Mario,Rossi,300,100m
+Luigi,Bianchi,301,Lancio del peso
+Paolo,Verdi,302,Maratona
+Alessandro,Esposito,303,100m
+Davide,Romano,304,Lancio del peso
+Andrea,Colombo,305,Maratona
+Marco,Bruno,306,100m
+Antonio,Ricci,307,Lancio del peso
+Francesco,Marino,308,Maratona
+Giuseppe,Greco,309,100m
+Salvatore,Gallo,310,Lancio del peso
+Vincenzo,Conti,311,Maratona
+Federico,De Luca,312,100m
+Roberto,Mancini,313,Lancio del peso
+Stefano,Costa,314,Maratona
+Claudio,Giordano,315,100m
+Michele,Rizzo,316,Lancio del peso
+Nicola,Lombardi,317,Maratona
+Giacomo,Moretti,318,100m
+Fabio,Barbieri,319,Lancio del peso
+Luca,Fontana,320,Maratona
+Matteo,Santoro,321,100m
+Domenico,Mariani,322,Lancio del peso
+Pietro,Rinaldi,323,Maratona
+Angelo,Caruso,324,100m
+Giorgio,Ferrara,325,Lancio del peso
+Enrico,Galli,326,Maratona
+Lorenzo,Martini,327,100m
+Simone,Leone,328,Lancio del peso
+Dario,Longo,329,Maratona
+Valerio,Gentile,330,100m
+Gabriele,Martinelli,331,Lancio del peso
+Samuele,Vitale,332,Maratona
+Cristian,Serra,333,100m
+Mattia,Coppola,334,Lancio del peso
+Riccardo,De Santis,335,Maratona
+Emanuele,D'Angelo,336,100m
+Tommaso,Marchetti,337,Lancio del peso
+Alessio,Parisi,338,Maratona
+Giulio,Villa,339,100m
+Manuel,Conte,340,Lancio del peso
+Jacopo,Ferraro,341,Maratona
+Nicolò,Ferri,342,100m
+Edoardo,Fabbri,343,Lancio del peso
+Filippo,Bianco,344,Maratona
+Piero,Marini,345,100m
+Carlo,Grasso,346,Lancio del peso
+Raffaele,Valentini,347,Maratona
+Giovanni,Messina,348,100m
+Alberto,Sala,349,Lancio del peso
+Vittorio,De Angelis,350,Maratona
+Michele,Gatti,351,100m
+Gianluca,Pellegrini,352,Lancio del peso
+Sandro,Palumbo,353,Maratona
+Massimo,Sanna,354,100m
+Daniele,Farina,355,Lancio del peso
+Corrado,Rizzi,356,Maratona
+Mauro,Monti,357,100m
+Renato,Cattaneo,358,Lancio del peso
+Sergio,Morelli,359,Maratona
+Aldo,Amato,360,100m
+Bruno,Silvestri,361,Lancio del peso
+Franco,Mazza,362,Maratona
+Guido,Testa,363,100m
+Luciano,Grassi,364,Lancio del peso
+Marcello,Pellegrino,365,Maratona
+Nino,Carbone,366,100m
+Oscar,Giuliani,367,Lancio del peso
+Patrizio,Benedetti,368,Maratona
+Remo,Barone,369,100m
+Silvio,Rossetti,370,Lancio del peso
+Tiziano,Caputo,371,Maratona
+Ugo,Montanari,372,100m
+Walter,Guerra,373,Lancio del peso
+Zeno,Palmieri,374,Maratona
+Adriano,Bernardi,375,100m
+Biagio,Martino,376,Lancio del peso
+Cosimo,Fiore,377,Maratona
+Damiano,De Rosa,378,100m
+Elio,Ferretti,379,Lancio del peso
+Fausto,Bellini,380,Maratona
+Gaetano,Basile,381,100m
+Igor,Riva,382,Lancio del peso
+Loris,Donati,383,Maratona
+Mirko,Salvatore,384,100m
+Nello,Romeo,385,Lancio del peso
+Orlando,Fiorillo,386,Maratona
+Primo,Abbate,387,100m
+Quinto,Neri,388,Lancio del peso
+Rocco,Barberis,389,Maratona
+Saverio,D'Amico,390,100m
+Teo,Pagano,391,Lancio del peso
+Umberto,Ruggiero,392,Maratona
+Vanni,Sartori,393,100m
+John,Smith,400,100m
+Paul,Johnson,401,Lancio del peso
+Michael,Williams,402,Maratona
+David,Brown,403,100m
+James,Jones,404,Lancio del peso
+Robert,Miller,405,Maratona
+William,Davis,406,100m
+Richard,Garcia,407,Lancio del peso
+Joseph,Rodriguez,408,Maratona
+Thomas,Wilson,409,100m
+Charles,Martinez,410,Lancio del peso
+Christopher,Anderson,411,Maratona
+Daniel,Taylor,412,100m
+Matthew,Thomas,413,Lancio del peso
+Anthony,Hernandez,414,Maratona
+Mark,Moore,415,100m
+Donald,Martin,416,Lancio del peso
+Steven,Jackson,417,Maratona
+Andrew,Thompson,418,100m
+Kevin,White,419,Lancio del peso
+Brian,Lopez,420,Maratona
+George,Lee,421,100m
+Edward,Gonzalez,422,Lancio del peso
+Ronald,Harris,423,Maratona
+Timothy,Clark,424,100m
+Jason,Lewis,425,Lancio del peso
+Jeffrey,Robinson,426,Maratona
+Ryan,Walker,427,100m
+Jacob,Perez,428,Lancio del peso
+Gary,Hall,429,Maratona
+Nicholas,Young,430,100m
+Eric,Allen,431,Lancio del peso
+Stephen,Sanchez,432,Maratona
+Jonathan,Wright,433,100m
+Larry,King,434,Lancio del peso
+Justin,Scott,435,Maratona
+Scott,Green,436,100m
+Brandon,Baker,437,Lancio del peso
+Frank,Adams,438,Maratona
+Benjamin,Nelson,439,100m
+Gregory,Hill,440,Lancio del peso
+Samuel,Ramirez,441,Maratona
+Raymond,Campbell,442,100m
+Patrick,Mitchell,443,Lancio del peso
+Alexander,Roberts,444,Maratona
+Jack,Carter,445,100m
+Dennis,Phillips,446,Lancio del peso
+Jerry,Evans,447,Maratona
+Tyler,Turner,448,100m
+Aaron,Torres,449,Lancio del peso
+Henry,Parker,450,Maratona
+Douglas,Collins,451,100m
+Jose,Edwards,452,Lancio del peso
+Peter,Stewart,453,Maratona
+Adam,Flores,454,100m
+Nathan,Morris,455,Lancio del peso
+Zachary,Nguyen,456,Maratona
+Walter,Murphy,457,100m
+Kyle,Rivera,458,Lancio del peso
+Harold,Cook,459,Maratona
+Carl,Rogers,460,100m
+Jeremy,Morgan,461,Lancio del peso
+Keith,Peterson,462,Maratona
+Roger,Cooper,463,100m
+Gerald,Reed,464,Lancio del peso
+Ethan,Bailey,465,Maratona
+Arthur,Bell,466,100m
+Terry,Gomez,467,Lancio del peso
+Sean,Kelly,468,Maratona
+Christian,Howard,469,100m
+Austin,Ward,470,Lancio del peso
+Joe,Cox,471,Maratona
+Albert,Diaz,472,100m
+Jesse,Richardson,473,Lancio del peso
+Willie,Wood,474,Maratona
+Billy,Watson,475,100m
+Bryan,Brooks,476,Lancio del peso
+Bruce,Bennett,477,Maratona
+Jordan,Gray,478,100m
+Dylan,James,479,Lancio del peso
+Eugene,Reyes,480,Maratona
+Louis,Cruz,481,100m
+Wayne,Hughes,482,Lancio del peso
+Alan,Price,483,Maratona
+Juan,Myers,484,100m
+Ralph,Long,485,Lancio del peso
+Roy,Foster,486,Maratona
+Vincent,Sanders,487,100m
+Bobby,Ross,488,Lancio del peso
+Russell,Morales,489,Maratona
+Johnny,Powell,490,100m
+Bradley,Sullivan,491,Lancio del peso
+Philip,Russell,492,Maratona
+Gabriel,Ortiz,493,100m
+Marc,Jenkins,494,Lancio del peso
+Hans,Müller,500,100m
+Klaus,Schmidt,501,Lancio del peso
+Jurgen,Schneider,502,Maratona
+Stefan,Fischer,503,100m
+Lukas,Weber,504,Lancio del peso
+Karl,Meyer,505,Maratona
+Heinrich,Wagner,506,100m
+Otto,Becker,507,Lancio del peso
+Friedrich,Schulz,508,Maratona
+Wilhelm,Hoffmann,509,100m
+Jean,Dupont,510,Lancio del peso
+Pierre,Martin,511,Maratona
+Michel,Bernard,512,100m
+Jacques,Thomas,513,Lancio del peso
+Marcel,Petit,514,Maratona
+Francois,Robert,515,100m
+Philippe,Richard,516,Lancio del peso
+Alain,Durand,517,Maratona
+Louis,Dubois,518,100m
+Thierry,Moreau,519,Lancio del peso
+Carlos,Garcia,520,Maratona
+Juan,Rodriguez,521,100m
+Pedro,Martinez,522,Lancio del peso
+Luis,Hernandez,523,Maratona
+Miguel,Lopez,524,100m
+Jorge,Gonzalez,525,Lancio del peso
+Fernando,Perez,526,Maratona
+Javier,Sanchez,527,100m
+Manuel,Ramirez,528,Lancio del peso
+Antonio,Torres,529,Maratona
+Dimitri,Ivanov,530,100m
+Ivan,Petrov,531,Lancio del peso
+Boris,Sidorov,532,Maratona
+Vladimir,Volkov,533,100m
+Sergei,Federov,534,Lancio del peso
+Andrei,Morozov,535,Maratona
+Pavel,Popov,536,100m
+Nikolai,Sokolov,537,Lancio del peso
+Mikhail,Lebedev,538,Maratona
+Yuri,Kozlov,539,100m
+Hiroshi,Tanaka,540,Lancio del peso
+Takeshi,Yamamoto,541,Maratona
+Kenji,Nakamura,542,100m
+Shinji,Kobayashi,543,Lancio del peso
+Taro,Saito,544,Maratona
+Yoshi,Takahashi,545,100m
+Masao,Sato,546,Lancio del peso
+Koji,Suzuki,547,Maratona
+Hideo,Ito,548,100m
+Akira,Watanabe,549,Lancio del peso
+Wei,Li,550,Maratona
+Lei,Wang,551,100m
+Jun,Zhang,552,Lancio del peso
+Tao,Liu,553,Maratona
+Min,Chen,554,100m
+Jie,Yang,555,Lancio del peso
+Hao,Zhao,556,Maratona
+Yi,Huang,557,100m
+Feng,Zhou,558,Lancio del peso
+Bo,Wu,559,Maratona
+Mohamed,Ali,560,100m
+Ahmed,Hassan,561,Lancio del peso
+Mustafa,Ibrahim,562,Maratona
+Omar,Khalil,563,100m
+Youssef,Said,564,Lancio del peso
+Hassan,Abdallah,565,Maratona
+Ali,Mahmoud,566,100m
+Hussein,Mustafa,567,Lancio del peso
+Tarek,Osman,568,Maratona
+Karim,Saleh,569,100m
+Sven,Johansson,570,Lancio del peso
+Lars,Andersson,571,Maratona
+Erik,Karlsson,572,100m
+Bjorn,Nilsson,573,Lancio del peso
+Olaf,Eriksson,574,Maratona
+Magnus,Larsson,575,100m
+Anders,Olsson,576,Lancio del peso
+Per,Persson,577,Maratona
+Mikael,Svensson,578,100m
+Jan,Gustafsson,579,Lancio del peso
+Liam,O'Connor,580,Maratona
+Sean,Murphy,581,100m
+Conor,Kelly,582,Lancio del peso
+Patrick,Walsh,583,Maratona
+Ryan,O'Brien,584,100m
+Niall,Byrne,585,Lancio del peso
+Cian,Ryan,586,Maratona
+Eoin,Doyle,587,100m
+Rory,McCarthy,588,Lancio del peso
+Declan,Gallagher,589,Maratona
+Kofi,Mensah,590,100m
+Kwame,Osei,591,Lancio del peso
+Yaw,Appiah,592,Maratona
+Ebo,Boateng,593,100m
+Kojo,Owusu,594,Lancio del peso
+Kwesi,Yeboah,595,Maratona
+Akwasi,Antwi,596,100m
+Kobina,Sarpong,597,Lancio del peso
+Panyin,Acheampong,598,Maratona
+Kakr,Bonsu,599,100m
+Samuel,Eto,600,Lancio del peso
+Didier,Drogba,601,Maratona
+George,Weah,602,100m
+Roger,Milla,603,Lancio del peso
+Jay,Okocha,604,Maratona
+Nwankwo,Kanu,605,100m
+Yaya,Toure,606,Lancio del peso
+Michael,Essien,607,Maratona
+Sadio,Mane,608,100m
+Mohamed,Salah,609,Lancio del peso
+Riyad,Mahrez,610,Maratona
+Pierre,Aubameyang,611,100m
+Thomas,Partey,612,Lancio del peso
+Victor,Osimhen,613,Maratona
+Wilfried,Zaha,614,100m
+Kalidou,Koulibaly,615,Lancio del peso
+Edouard,Mendy,616,Maratona
+Hakim,Ziyech,617,100m
+Achraf,Hakimi,618,Lancio del peso
+Franck,Kessie,619,Maratona
+Joel,Matip,620,100m
+Eric,Bailly,621,Lancio del peso
+Naby,Keita,622,Maratona
+Yves,Bissouma,623,100m
+Andre,Onana,624,Lancio del peso
+Ismaila,Sarr,625,Maratona
+Nicolas,Pepe,626,100m
+Serge,Aurier,627,Lancio del peso
+Idrissa,Gueye,628,Maratona
+Cheikhou,Kouyate,629,100m
+Patson,Daka,630,Lancio del peso
+Enock,Mwepu,631,Maratona
+Marvelous,Nakamba,632,100m
+Tino,Kadewere,633,Lancio del peso
+Fashion,Sakala,634,Maratona
+Marshall,Munetsi,635,100m
+Khama,Billiat,636,Lancio del peso
+Knowledge,Musona,637,Maratona
+Tendai,Ndarama,638,100m
+Nyasha,Mushekwi,639,Lancio del peso
+Teenage,Hadebe,640,Maratona
+Aleksandar,Mitrovic,641,100m
+Dusan,Vlahovic,642,Lancio del peso
+Luka,Jovic,643,Maratona
+Sergej,Savic,644,100m
+Filip,Kostic,645,Lancio del peso
+Dusan,Tadic,646,Maratona
+Nemanja,Matic,647,100m
+Branislav,Ivanovic,648,Lancio del peso
+Nemanja,Vidic,649,Maratona
+Dejan,Stankovic,650,100m
+Sinisa,Mihajlovic,651,Lancio del peso
+Predrag,Mijatovic,652,Maratona
+Dragan,Stojkovic,653,100m
+Savo,Milosevic,654,Lancio del peso
+Mateja,Kezman,655,Maratona
+Darko,Kovacevic,656,100m
+Adem,Ljajic,657,Lancio del peso
+Nikola,Milenkovic,658,Maratona
+Marko,Grujic,659,100m
+Luka,Modric,660,Lancio del peso
+Ivan,Rakitic,661,Maratona
+Mario,Mandzukic,662,100m
+Ivan,Perisic,663,Lancio del peso
+Mateo,Kovacic,664,Maratona
+Marcelo,Brozovic,665,100m
+Dejan,Lovren,666,Lancio del peso
+Domagoj,Vida,667,Maratona
+Danijel,Subasic,668,100m
+Ante,Rebic,669,Lancio del peso
+Andrej,Kramaric,670,Maratona
+Josko,Gvardiol,671,100m
+Borna,Sosa,672,Lancio del peso
+Mislav,Orsic,673,Maratona
+Bruno,Petkovic,674,100m
+Dominik,Livakovic,675,Lancio del peso
+Edin,Dzeko,676,Maratona
+Miralem,Pjanic,677,100m
+Asmir,Begovic,678,Lancio del peso
+Sead,Kolasinac,679,Maratona
+Edin,Visca,680,100m
+Rade,Krunic,681,Lancio del peso
+Amer,Gojak,682,Maratona
+Haris,Duljevic,683,100m
+Muhamed,Besic,684,Lancio del peso
+Izet,Hajrovic,685,Maratona
+Senad,Lulic,686,100m
+Vedad,Ibisevic,687,Lancio del peso
+Zvjezdan,Misimovic,688,Maratona
+Emir,Spahic,689,100m
+Hasan,Salihamidzic,690,Lancio del peso
+Safet,Susic,691,Maratona
+Goran,Pandev,692,100m
+Enis,Bardhi,693,Lancio del peso
+Eljif,Elmas,694,Maratona
+Ezgjan,Alioski,695,100m
+Aleksandar,Trajkovski,696,Lancio del peso
+Stefan,Ristovski,697,Maratona
+Arijan,Ademi,698,100m
+Darko,Churlinov,699,Lancio del peso
+Boban,Nikolov,700,Maratona
+Stole,Dimitrievski,701,100m
+Visar,Musliu,702,Lancio del peso
+Kire,Ristevski,703,Maratona
+Ferhan,Hasani,704,100m
+Krste,Velkoski,705,Lancio del peso
+Agim,Ibraimi,706,Maratona
+Artim,Sakiri,707,100m
+Goce,Sedloski,708,Lancio del peso
+Gjorgji,Hristov,709,Maratona
+Darko,Pancev,710,100m
+Jan,Oblak,711,Lancio del peso
+Samir,Handanovic,712,Maratona
+Josip,Ilicic,713,100m
+Kevin,Kampl,714,Lancio del peso
+Valter,Birsa,715,Maratona
+Bojan,Jokic,716,100m
+Tim,Matavz,717,Lancio del peso
+Robert,Beric,718,Maratona
+Benjamin,Verbic,719,100m
+Miha,Zajc,720,Lancio del peso
+Jasmin,Kurtic,721,Maratona
+Rene,Krhin,722,100m
+Andraz,Sporar,723,Lancio del peso
+Domen,Crnigoj,724,Maratona
+Petar,Stojanovic,725,100m
+Jaka,Bijol,726,Lancio del peso
+Sandi,Lovric,727,Maratona
+Zlatko,Zahovic,728,100m
+Milenko,Acimovic,729,Lancio del peso
+Bostjan,Cesar,730,Maratona
+Arda,Turan,731,100m
+Burak,Yilmaz,732,Lancio del peso
+Hakan,Calhanoglu,733,Maratona
+Cengiz,Under,734,100m
+Caglar,Soyuncu,735,Lancio del peso
+Merih,Demiral,736,Maratona
+Yusuf,Yazici,737,100m
+Zeki,Celik,738,Lancio del peso
+Ozan,Kabak,739,Maratona
+Enes,Unal,740,100m
+Okay,Yokuslu,741,Lancio del peso
+Kenan,Karaman,742,Maratona
+Irfan,Kahveci,743,100m
+Dorukhan,Tokoz,744,Lancio del peso
+Mert,Muldur,745,Maratona
+Altay,Bayindir,746,100m
+Ugurcan,Cakir,747,Lancio del peso
+Rustu,Recber,748,Maratona
+Emre,Belozoglu,749,100m
+Nihat,Kahveci,750,Lancio del peso
+Robert,Lewandowski,751,Maratona
+Wojciech,Szczesny,752,100m
+Piotr,Zielinski,753,Lancio del peso
+Arkadiusz,Milik,754,Maratona
+Grzegorz,Krychowiak,755,100m
+Kamil,Glik,756,Lancio del peso
+Jan,Bednarek,757,Maratona
+Matty,Cash,758,100m
+Nicola,Zalewski,759,Lancio del peso
+Krzysztof,Piatek,760,Maratona
+Karol,Linetty,761,100m
+Bartosz,Bereszynski,762,Lancio del peso
+Lukasz,Fabianski,763,Maratona
+Jakub,Blaszczykowski,764,100m
+Lukasz,Piszczek,765,Lancio del peso
+Jerzy,Dudek,766,Maratona
+Zbigniew,Boniek,767,100m
+Grzegorz,Lato,768,Lancio del peso
+Kazimierz,Deyna,769,Maratona
+Wlodzimierz,Lubanski,770,100m
+Ferenc,Puskas,771,Lancio del peso
+Sandor,Kocsis,772,Maratona
+Nandor,Hidegkuti,773,100m
+Zoltan,Czibor,774,Lancio del peso
+Jozsef,Bozsik,775,Maratona
+Gyula,Grosics,776,100m
+Laszlo,Kubala,777,Lancio del peso
+Florian,Albert,778,Maratona
+Tibor,Nyilasi,779,100m
+Lajos,Detari,780,Lancio del peso
+Balazs,Dzsudzsak,781,Maratona
+Adam,Szalai,782,100m
+Willi,Orban,783,Lancio del peso
+Peter,Gulacsi,784,Maratona
+Dominik,Szoboszlai,785,100m
+Roland,Sallai,786,Lancio del peso
+Attila,Szalai,787,Maratona
+Andras,Schafer,788,100m
+Loic,Nego,789,Lancio del peso
+Endre,Botka,790,Maratona
+Gheorghe,Hagi,791,100m
+Gheorghe,Popescu,792,Lancio del peso
+Dan,Petrescu,793,Maratona
+Adrian,Mutu,794,100m
+Cristian,Chivu,795,Lancio del peso
+Miodrag,Belodedici,796,Maratona
+Ilie,Dumitrescu,797,100m
+Florin,Raducioiu,798,Lancio del peso
+Bogdan,Stelea,799,Maratona
+Dorin,Mateut,800,100m
+Viorel,Moldovan,801,Lancio del peso
+Cosmin,Contra,802,Maratona
+Ciprian,Tatarusanu,803,100m
+Vlad,Chiriches,804,Lancio del peso
+Razvan,Marin,805,Maratona
+Nicusor,Stanciu,806,100m
+Ianis,Hagi,807,Lancio del peso
+Alexandru,Cicaldau,808,Maratona
+Dennis,Man,809,100m
+Florin,Tanase,810,Lancio del peso
+Hristo,Stoichkov,811,Maratona
+Dimitar,Berbatov,812,100m
+Stiliyan,Petrov,813,Lancio del peso
+Martin,Petrov,814,Maratona
+Krasimir,Balakov,815,100m
+Yordan,Letchkov,816,Lancio del peso
+Emil,Kostadinov,817,Maratona
+Trifon,Ivanov,818,100m
+Borislav,Mihaylov,819,Lancio del peso
+Lyuboslav,Penev,820,Maratona
+Georgi,Asparuhov,821,100m
+Hristo,Bonev,822,Lancio del peso
+Petar,Zhekov,823,Maratona
+Dimitar,Yakimov,824,100m
+Nasko,Sirakov,825,Lancio del peso
+Ivelin,Popov,826,Maratona
+Todor,Nedelev,827,100m
+Kiril,Despodov,828,Lancio del peso
+Anton,Nedyalkov,829,Maratona
+Georgi,Yomov,830,100m
+Petr,Cech,831,Lancio del peso
+Pavel,Nedved,832,Maratona
+Tomas,Rosicky,833,100m
+Karel,Poborsky,834,Lancio del peso
+Jan,Koller,835,Maratona
+Milan,Baros,836,100m
+Vladimir,Smicer,837,Lancio del peso
+Patrik,Berger,838,Maratona
+Marek,Jankulovski,839,100m
+Tomas,Soucek,840,Lancio del peso
+Vladimir,Coufal,841,Maratona
+Patrik,Schick,842,100m
+Antonin,Barak,843,Lancio del peso
+Tomas,Vaclik,844,Maratona
+Jakub,Jankto,845,100m
+Adam,Hlozek,846,Lancio del peso
+Alex,Kral,847,Maratona
+Lukas,Masopust,848,100m
+Ondrej,Celustka,849,Lancio del peso
+Jan,Boril,850,Maratona
+Marek,Hamsik,851,100m
+Martin,Skrtel,852,Lancio del peso
+Milan,Skriniar,853,Maratona
+Juraj,Kucka,854,100m
+Stanislav,Lobotka,855,Lancio del peso
+Peter,Pekarik,856,Maratona
+Vladimir,Weiss,857,100m
+Robert,Mak,858,Lancio del peso
+Ondrej,Duda,859,Maratona
+Martin,Dubravka,860,100m
+Lubomir,Satka,861,Lancio del peso
+David,Hancko,862,Maratona
+Lukas,Haraslin,863,100m
+Ivan,Schranz,864,Lancio del peso
+Robert,Bozenik,865,Maratona
+Szilard,Nemeth,866,100m
+Miroslav,Karhan,867,Lancio del peso
+Jan,Durica,868,Maratona
+Robert,Vittek,869,100m
+Filip,Holosko,870,Lancio del peso
+George,Best,871,Maratona
+Roy,Keane,872,100m
+Robbie,Keane,873,Lancio del peso
+Shay,Given,874,Maratona
+Damien,Duff,875,100m
+John,O'Shea,876,Lancio del peso
+Denis,Irwin,877,Maratona
+Niall,Quinn,878,100m
+Steve,Staunton,879,Lancio del peso
+Packie,Bonner,880,Maratona
+Paul,McGrath,881,100m
+Liam,Brady,882,Lancio del peso
+Frank,Stapleton,883,Maratona
+Tony,Cascarino,884,100m
+Ray,Houghton,885,Lancio del peso
+Seamus,Coleman,886,Maratona
+Shane,Duffy,887,100m
+Jeff,Hendrick,888,Lancio del peso
+James,McClean,889,Maratona
+Matt,Doherty,890,100m
+Gareth,Bale,891,Lancio del peso
+Ryan,Giggs,892,Maratona
+Ian,Rush,893,100m
+Aaron,Ramsey,894,Lancio del peso
+Mark,Hughes,895,Maratona
+Neville,Southall,896,100m
+Gary,Speed,897,Lancio del peso
+Craig,Bellamy,898,Maratona
+Joe,Allen,899,100m
+Ben,Davies,900,Lancio del peso
+Wayne,Hennessey,901,Maratona
+Ashley,Williams,902,100m
+Chris,Gunter,903,Lancio del peso
+Hal,Robson-Kanu,904,Maratona
+Daniel,James,905,100m
+Kieffer,Moore,906,Lancio del peso
+Harry,Wilson,907,Maratona
+Neco,Williams,908,100m
+Ethan,Ampadu,909,Lancio del peso
+Joe,Rodon,910,Maratona
+Kenny,Dalglish,911,100m
+Denis,Law,912,Lancio del peso
+Graeme,Souness,913,Maratona
+Archie,Gemmill,914,100m
+Gordon,Strachan,915,Lancio del peso
+Ally,McCoist,916,Maratona
+Jim,Baxter,917,100m
+Billy,Bremner,918,Lancio del peso
+Darren,Fletcher,919,Maratona
+Andrew,Robertson,920,100m
+Kieran,Tierney,921,Lancio del peso
+Scott,McTominay,922,Maratona
+John,McGinn,923,100m
+Che,Adams,924,Lancio del peso
+Billy,Gilmour,925,Maratona
+Lyndon,Dykes,926,100m
+Ryan,Christie,927,Lancio del peso
+Callum,McGregor,928,Maratona
+David,Marshall,929,100m
+Grant,Hanley,930,Lancio del peso
+Eidur,Gudjohnsen,931,Maratona
+Gylfi,Sigurdsson,932,100m
+Aron,Gunnarsson,933,Lancio del peso
+Kolbeinn,Sigthorsson,934,Maratona
+Birkir,Bjarnason,935,100m
+Alfred,Finnbogason,936,Lancio del peso
+Johann,Gudmundsson,937,Maratona
+Ragnar,Sigurdsson,938,100m
+Kari,Arnason,939,Lancio del peso
+Hannes,Halldorsson,940,Maratona
+Jon,Bodvarsson,941,100m
+Ari,Skulason,942,Lancio del peso
+Birkir,Saevarsson,943,Maratona
+Runar,Sigurjonsson,944,100m
+Hordur,Magnusson,945,Lancio del peso
+Arnor,Traustason,946,Maratona
+Sverrir,Ingason,947,100m
+Victor,Palsson,948,Lancio del peso
+Albert,Gudmundsson,949,Maratona
+Andri,Gudjohnsen,950,100m
+Jari,Litmanen,951,Lancio del peso
+Sami,Hyypia,952,Maratona
+Teemu,Pukki,953,100m
+Lukas,Hradecky,954,Lancio del peso
+Glen,Kamara,955,Maratona
+Tim,Sparv,956,100m
+Joona,Toivio,957,Lancio del peso
+Paulus,Arajuuri,958,Maratona
+Jere,Uronen,959,100m
+Robin,Lod,960,Lancio del peso
+Joel,Pohjanpalo,961,Maratona
+Fredrik,Jensen,962,100m
+Rasmus,Schuller,963,Lancio del peso
+Pyry,Soiri,964,Maratona
+Lassi,Lappalainen,965,100m
+Marcus,Forss,966,Lancio del peso
+Onni,Valakari,967,Maratona
+Robert,Taylor,968,100m
+Leo,Vaisanen,969,Lancio del peso
+Daniel,O'Shaughnessy,970,Maratona
+Henrikh,Mkhitaryan,971,100m
+Sargis,Adamyan,972,Lancio del peso
+Tigran,Barseghyan,973,Maratona
+Varazdat,Haroyan,974,100m
+Kamo,Hovhannisyan,975,Lancio del peso
+Gevorg,Ghazaryan,976,Maratona
+Artak,Grigoryan,977,100m
+Hovhannes,Hambardzumyan,978,Lancio del peso
+Solomon,Udo,979,Maratona
+Wbeymar,Angulo,980,100m
+Edgar,Babayan,981,Lancio del peso
+Aleksandre,Karapetian,982,Maratona
+Andre,Calisir,983,100m
+Hayk,Ishkhanyan,984,Lancio del peso
+Taron,Voskanyan,985,Maratona
+David,Yurchenko,986,100m
+Khvicha,Kvaratskhelia,987,Lancio del peso
+Giorgi,Mamardashvili,988,Maratona
+Guram,Kashia,989,100m
+Jaba,Kankava,990,Lancio del peso
+Valeri,Qazaishvili,991,Maratona
+Otar,Kiteishvili,992,100m
+Saba,Lobjanidze,993,Lancio del peso
+Giorgi,Chakvetadze,994,Maratona
+Zuriko,Davitashvili,995,100m
+Georges,Mikautadze,996,Lancio del peso
+Budu,Zivzivadze,997,Maratona
+Lasha,Dvali,998,100m
+Irakli,Azarovi,999,Lancio del peso
