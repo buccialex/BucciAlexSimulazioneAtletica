@@ -22,6 +22,7 @@ public class Lanciatore extends Atleta implements iCasualita{
      */
     public Lanciatore(String nome, String cognome){
         super(nome, cognome);
+        
     }
 
     

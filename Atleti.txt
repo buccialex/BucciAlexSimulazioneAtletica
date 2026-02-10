@@ -739,3 +739,4 @@ Georges,Mikautadze,996,Lancio del peso
 Budu,Zivzivadze,997,Maratona
 Lasha,Dvali,998,100m
 Irakli,Azarovi,999,Lancio del peso
+Eldegone,Eldego,1000,Lancio del peso
