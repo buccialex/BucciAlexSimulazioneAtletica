@@ -11,6 +11,7 @@ package buccialexsimulazioneatletica;
 public class BucciAlexSimulazioneAtletica {
 
     /**
+     * Comparsa dell'interfaccia grafica
      * @param args the command line arguments
      */
     public static void main(String[] args) {

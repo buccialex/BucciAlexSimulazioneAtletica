@@ -35,6 +35,9 @@ public class Lanciatore extends Atleta implements iCasualita{
         return 6.00 + ((double)this.forza/100)*(23.57 - 6.00);
     }
 
+    /**
+     * genera un valore casuale per la forza del lanciatore
+     */
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();

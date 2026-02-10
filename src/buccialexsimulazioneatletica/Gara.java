@@ -30,6 +30,7 @@ public class Gara {
         this.durata = durata;
         this.tipologia = tipologia;
     }
+<<<<<<< HEAD
     
     public static List<Atleta> caricaAtleti(String percorsoFile) {
         List<Atleta> lista = new ArrayList<>();
@@ -67,34 +68,68 @@ public class Gara {
         }
         return lista;
     
+=======
+   
+    /**
+     * metodo che avvia lo svolgimento della gare
+     */
+>>>>>>> 179d81c634dc42ee0af9a5c72d513f97bf4f87f0
     public void svolgiGara(){
         
     }
 
+    /**
+     * get di Durata
+     * @return 
+     */
     public double getDurata() {
         return durata;
     }
 
+    /**
+     * set di Durata
+     * @param durata 
+     */
     public void setDurata(Float durata) {
         this.durata = durata;
     }
 
+    /**
+     * get di Tipologia
+     * @return 
+     */
     public String getTipologia() {
         return tipologia;
     }
 
+    /**
+     * set di Tipologia
+     * @param tipologia 
+     */
     public void setTipologia(String tipologia) {
         this.tipologia = tipologia;
     }
 
+    /**
+     * get di Vincitore
+     * @return 
+     */
     public Atleta getVincitore() {
         return vincitore;
     }
 
+    /**
+     * set di Vincitore
+     * @param vincitore 
+     */
     public void setVincitore(Atleta vincitore) {
         this.vincitore = vincitore;
     }
 
+    /**
+     * ritorna il risultato della gara
+     * @return 
+     */
     @Override
     public String toString() {
         return "Gara{" + "listaAtleti=" + listaAtleti + ", durata=" + durata + ", tipologia=" + tipologia + ", vincitore=" + vincitore + '}';

@@ -35,6 +35,9 @@ public class Velocista extends Atleta implements iCasualita{
         return 15 - ((double)this.velocita / 100.0) * 15 - 9.57;
     }
 
+    /**
+     * genera un valora casuale da asseganre al velocistà in modo da garantire la randomicità
+     */
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();

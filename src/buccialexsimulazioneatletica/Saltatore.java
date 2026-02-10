@@ -32,6 +32,9 @@ public class Saltatore extends Atleta implements iCasualita{
         return 4.50 + ((double)this.potenzaSalto/ 100.0) * (8.96 - 4.50);
     }
 
+    /**
+     * assegna un valora casuale al saltatore in modo che ognuno abbia una potenza diversa
+     */
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();
