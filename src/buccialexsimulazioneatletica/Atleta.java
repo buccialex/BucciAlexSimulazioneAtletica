@@ -29,18 +29,34 @@ public abstract class Atleta {
      */
     public abstract double calcolaPunteggio();
 
+    /**
+     * get di Nome
+     * @return 
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * set di Nome
+     * @param nome 
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * get di Cognome
+     * @return 
+     */
     public String getCognome() {
         return cognome;
     }
 
+    /**
+     * set di Cognome
+     * @param cognome 
+     */
     public void setCognome(String cognome) {
         this.cognome = cognome;
     }

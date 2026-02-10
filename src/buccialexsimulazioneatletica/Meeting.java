@@ -14,22 +14,40 @@ public class Meeting {
      */
     private ArrayList<Gara> listaGare;
     
+    
     public Meeting(){
         listaGare = new ArrayList<>();
     }
     
+    /**
+     * Metodo che crea la gara
+     * @param durataGara
+     * @param tipologia 
+     */
     public void creaGara(Float durataGara, String tipologia){
         listaGare.add(new Gara(durataGara, tipologia));  
     }
 
+    /**
+     * get lista gare
+     * @return 
+     */
     public ArrayList<Gara> getListaGare() {
         return listaGare;
     }
 
+    /**
+     * set lista gare
+     * @param listaGare 
+     */
     public void setListaGare(ArrayList<Gara> listaGare) {
         this.listaGare = listaGare;
     }
 
+    /**
+     * ritorna la lista di gare create
+     * @return 
+     */
     @Override
     public String toString() {
         return "Meeting{" + "listaGare=" + listaGare + '}';
