@@ -8,7 +8,7 @@ import java.util.*;
  *
  * @author bucci.alex
  */
-public class Saltatore extends Atleta implements iCasualita{
+public class Saltatore extends Atleta {
     /**
      * attributi
      */

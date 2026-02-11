@@ -25,7 +25,8 @@ public class Meeting {
      * @param tipologia 
      */
     public void creaGara(Float durataGara, String tipologia){
-        listaGare.add(new Gara(durataGara, tipologia));  
+        // La logica di popolamento random degli atleti è ora nel costruttore di Gara
+        listaGare.add(new Gara(durataGara, tipologia));
     }
 
     /**

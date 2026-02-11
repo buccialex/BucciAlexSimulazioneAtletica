@@ -8,7 +8,7 @@ package buccialexsimulazioneatletica;
  *
  * @author bucci.alex
  */
-public abstract class Atleta {
+public abstract class Atleta implements iCasualita {
     /**
      * attributi
      */

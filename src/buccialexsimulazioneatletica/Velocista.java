@@ -8,7 +8,7 @@ import java.util.*;
  *
  * @author bucci.alex
  */
-public class Velocista extends Atleta implements iCasualita{
+public class Velocista extends Atleta {
     /**
      * attributi
      */
@@ -31,7 +31,6 @@ public class Velocista extends Atleta implements iCasualita{
      */
      @Override
     public double calcolaPunteggio() {
-        Random r = new Random();
         return 15 - ((double)this.velocita / 100.0) * 15 - 9.57;
     }
 
