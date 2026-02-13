@@ -45,17 +45,17 @@ public class FRMClassifica extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 400));
 
         TXTClassifica.setColumns(20);
+        TXTClassifica.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
         TXTClassifica.setRows(5);
+        TXTClassifica.setEnabled(false);
         jScrollPane1.setViewportView(TXTClassifica);
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Classifica");
         jPanel2.add(jLabel2);
 
@@ -90,7 +90,7 @@ public class FRMClassifica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    javax.swing.JTextArea TXTClassifica;
+    private javax.swing.JTextArea TXTClassifica;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

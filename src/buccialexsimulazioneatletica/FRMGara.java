@@ -35,8 +35,6 @@ public class FRMGara extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         cbTipo = new javax.swing.JComboBox<>();
-        txtDurata = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         btnCreaGara = new javax.swing.JButton();
         btnClassifica = new javax.swing.JButton();
 
@@ -56,7 +54,6 @@ public class FRMGara extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Simulatore meeting atletica");
         jPanel1.add(jLabel1);
 
@@ -68,8 +65,6 @@ public class FRMGara extends javax.swing.JFrame {
         cbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleziona ", "Atletica 100m", "Lancio del peso", "Salto in lungo", "Lancio del giavellotto", "Maratona" }));
         cbTipo.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 204)));
         cbTipo.setPreferredSize(new java.awt.Dimension(150, 22));
-
-        jLabel3.setText("Inserire la durata (h,min,sec)");
 
         btnCreaGara.setText("Invia");
         btnCreaGara.addActionListener(new java.awt.event.ActionListener() {
@@ -96,17 +91,9 @@ public class FRMGara extends javax.swing.JFrame {
                 .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtDurata, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(btnClassifica)
-                        .addGap(0, 1, Short.MAX_VALUE)))
-                .addGap(61, 61, 61)
+                .addGap(152, 152, 152)
+                .addComponent(btnClassifica)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(btnCreaGara, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -117,18 +104,11 @@ public class FRMGara extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtDurata, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCreaGara, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCreaGara, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(btnClassifica)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_START);
@@ -145,13 +125,6 @@ public class FRMGara extends javax.swing.JFrame {
                         javax.swing.JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (txtDurata.getText().isEmpty()) {
-                javax.swing.JOptionPane.showMessageDialog(this,
-                        "Inserisci un valore per la durata!",
-                        "Attenzione",
-                        javax.swing.JOptionPane.WARNING_MESSAGE);
-                return; // Esce dal metodo senza fare nulla
-            }
             if (cbTipo.getSelectedItem() == null) {
                 javax.swing.JOptionPane.showMessageDialog(this,
                         "Seleziona un tipo di gara!",
@@ -159,9 +132,9 @@ public class FRMGara extends javax.swing.JFrame {
                         javax.swing.JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            float durata = Float.parseFloat(txtDurata.getText());
             String tipo = cbTipo.getSelectedItem().toString();
-            m.creaGara(durata, tipo);
+            // la durata iniziale è fittizia, verrà aggiornata da Gara.svolgiGara()
+            m.creaGara(0f, tipo);
             javax.swing.JOptionPane.showMessageDialog(this,
                     "Gara creata con successo!",
                     "Info",
@@ -221,23 +194,39 @@ public class FRMGara extends javax.swing.JFrame {
                 atleti.sort((a1, a2) -> Double.compare(a1.calcolaPunteggio(), a2.calcolaPunteggio()));
                 
                 sb.append("CLASSIFICA ATLETI:\n");
-                int posizione = 1;
-                for (Atleta a : atleti) {
-                    double punteggio = a.calcolaPunteggio();
-                    String nome = a.getNome();
-                    String cognome = a.getCognome();
-                    
-                    if (a.equals(g.getVincitore())) {
-                        sb.append("🥇 ").append(posizione).append(". ")
-                          .append(nome).append(" ").append(cognome)
-                          .append(" - Punteggio: ").append(String.format("%.2f", punteggio))
-                          .append(" (VINCITORE)\n");
-                    } else {
-                        sb.append("   ").append(posizione).append(". ")
-                          .append(nome).append(" ").append(cognome)
-                          .append(" - Punteggio: ").append(String.format("%.2f", punteggio)).append("\n");
+                if (atleti.isEmpty()) {
+                    sb.append("(nessun atleta disponibile per questa gara)\n");
+                } else {
+                    int posizione = 1;
+                    for (Atleta a : atleti) {
+                        double punteggio = a.calcolaPunteggio();
+                        String nome = a.getNome();
+                        String cognome = a.getCognome();
+
+                        // determiniamo stringa leggibile con unità appropriata
+                        String valore;
+                        if (a instanceof Velocista) {
+                            valore = String.format("%.2f s", punteggio);
+                        } else if (a instanceof Saltatore) {
+                            valore = String.format("%.2f m", -punteggio);
+                        } else if (a instanceof Lanciatore) {
+                            valore = String.format("%.2f m", -punteggio);
+                        } else {
+                            valore = String.format("%.2f", punteggio);
+                        }
+
+                        if (a.equals(g.getVincitore())) {
+                            sb.append("").append(posizione).append(". ")
+                              .append(nome).append(" ").append(cognome)
+                              .append(" - ").append(valore)
+                              .append(" (VINCITORE)\n");
+                        } else {
+                            sb.append("   ").append(posizione).append(". ")
+                              .append(nome).append(" ").append(cognome)
+                              .append(" - ").append(valore).append("\n");
+                        }
+                        posizione++;
                     }
-                    posizione++;
                 }
                 sb.append("\n");
             }
@@ -265,9 +254,7 @@ public class FRMGara extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbTipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtDurata;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,8 @@ public class Lanciatore extends Atleta {
     /**
      * attributi
      */
-    private int forza;
+    // distanza del lancio in metri
+    private double forza;
     
     /**
      * costruttore di lanciatore
@@ -32,7 +33,8 @@ public class Lanciatore extends Atleta {
      */
     @Override
     public double calcolaPunteggio() {
-        return 6.00 + ((double)this.forza/100)*(23.57 - 6.00);
+        // più lunga è la distanza, migliore il punteggio (minore)
+        return -forza;
     }
 
     /**
@@ -41,7 +43,8 @@ public class Lanciatore extends Atleta {
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();
-        this.forza = r.nextInt(101);
+        // lancio in giavellotto/peso: prendiamo range 20..90 metri
+        forza = 20 + r.nextDouble() * 70;
     }
     
     

@@ -49,23 +49,42 @@ public class Gara {
         }
 
         // Filtra per specialità coerente con la tipologia
+        // Normalizziamo la tipologia passata dall'interfaccia (es. "Atletica 100m")
+        // affinché corrisponda ai valori nel file Atleti.txt.
+        String tipoNorm = tipologia.trim().toLowerCase();
         List<String[]> candidati = new ArrayList<>();
         for (String[] col : righe) {
             String specialita = col[3].trim().toLowerCase();
-            if (tipologia.equalsIgnoreCase("100m") && specialita.equals("100m")) {
+
+            // controlli più permissivi: usiamo contains per gestire prefissi/testi diversi
+            if (tipoNorm.contains("100m") && specialita.equals("100m")) {
                 candidati.add(col);
-            } else if (tipologia.equalsIgnoreCase("maratona") && specialita.equals("maratona")) {
+            } else if (tipoNorm.contains("maratona") && specialita.equals("maratona")) {
                 candidati.add(col);
-            } else if (tipologia.equalsIgnoreCase("lancio del peso") && specialita.equals("lancio del peso")) {
+            } else if (tipoNorm.contains("peso") && specialita.contains("lancio del peso")) {
                 candidati.add(col);
-            } else if ((tipologia.equalsIgnoreCase("alto") || tipologia.equalsIgnoreCase("lungo")) && (specialita.equals("alto") || specialita.equals("lungo"))) {
+            } else if (tipoNorm.contains("giavellotto") && specialita.contains("giavellotto")) {
+                candidati.add(col);
+            } else if ((tipoNorm.contains("alto") || tipoNorm.contains("lungo") || tipoNorm.contains("salto"))
+                    && (specialita.contains("alto") || specialita.contains("lungo") || specialita.contains("salto"))) {
                 candidati.add(col);
             }
+        }
+        if (candidati.isEmpty()) {
+            // Nel caso in cui non siano stati trovati atleti compatibili loggiamo per aiutare il debug
+            System.err.println("[Gara] nessun atleta trovato per tipologia '" + tipologia + "'." +
+                    " controllare i nomi presenti in Atleti.txt o il valore della combobox.");
         }
 
         // Scegli randomicamente un numero di atleti (ad esempio 8)
         Random rand = new Random();
-        int nAtleti = Math.min(8, candidati.size());
+        // per la maratona vogliamo più partecipanti (100) se disponibili
+        int nAtleti;
+        if (tipologia.toLowerCase().contains("maratona")) {
+            nAtleti = Math.min(100, candidati.size());
+        } else {
+            nAtleti = Math.min(8, candidati.size());
+        }
         Set<Integer> scelti = new HashSet<>();
         while (scelti.size() < nAtleti) {
             int idx = rand.nextInt(candidati.size());
@@ -75,14 +94,19 @@ public class Gara {
             String[] col = candidati.get(idx);
             String nome = col[0].trim();
             String cognome = col[1].trim();
-            // Crea atleta della specialità giusta
-            if (tipologia.equalsIgnoreCase("100m")) {
-                listaAtleti.add(new Velocista(nome, cognome));
-            } else if (tipologia.equalsIgnoreCase("maratona")) {
-                listaAtleti.add(new Velocista(nome, cognome));
-            } else if (tipologia.equalsIgnoreCase("lancio del peso")) {
+            // Crea atleta della specialità giusta in base al tipo selezionato (non alla specialità del file)
+            String tipoNorm2 = tipologia.trim().toLowerCase();
+            if (tipoNorm2.contains("100m") || tipoNorm2.contains("maratona")) {
+                Velocista v = new Velocista(nome, cognome);
+                if (tipoNorm2.contains("maratona")) {
+                    v.setDistanzaKm(46.0);
+                } else {
+                    v.setDistanzaKm(0.1);
+                }
+                listaAtleti.add(v);
+            } else if (tipoNorm2.contains("peso") || tipoNorm2.contains("giavellotto")) {
                 listaAtleti.add(new Lanciatore(nome, cognome));
-            } else if (tipologia.equalsIgnoreCase("alto") || tipologia.equalsIgnoreCase("lungo")) {
+            } else if (tipoNorm2.contains("alto") || tipoNorm2.contains("lungo") || tipoNorm2.contains("salto")) {
                 listaAtleti.add(new Saltatore(nome, cognome));
             }
         }
@@ -118,14 +142,17 @@ public class Gara {
                 // Decidiamo quale sottoclasse istanziare
                 switch (specialita) {
                     case "100m":
-                    case "Maratona":
+                    case "maratona":
                         lista.add(new Velocista(nome, cognome));
                         break;
-                    case "Lancio del peso":
+                    case "lancio del peso":
+                    case "lancio del giavellotto":
                         lista.add(new Lanciatore(nome, cognome));
                         break;
                     case "alto":
                     case "lungo":
+                    case "salto in lungo":
+                    case "salto":
                         lista.add(new Saltatore(nome, cognome));
                         break;
                     default:
@@ -149,14 +176,41 @@ public class Gara {
         // Determina il vincitore confrontando i punteggi
         Atleta vincitore = null;
         double migliorPunteggio = Double.MAX_VALUE; // Per gare di tempo, minore è meglio
+        // terreni per calcolo durata gara
+        double peggiorTempo = 0.0; // in secondi
+        boolean haTimingEvents = false; // ha atleti la cui gara si base su tempo?
+        
         for (Atleta a : listaAtleti) {
             double punteggio = a.calcolaPunteggio();
             if (punteggio < migliorPunteggio) {
                 migliorPunteggio = punteggio;
                 vincitore = a;
             }
+            // convertiamo in tempo positivo
+            double tempoSec;
+            if (a instanceof Velocista) {
+                tempoSec = punteggio; // già in secondi
+                haTimingEvents = true;
+            } else if (a instanceof Saltatore || a instanceof Lanciatore) {
+                // punteggio negativo = -distanza, ma la gara non ha "tempo"
+                // ignoriamo per durata
+                tempoSec = 0;
+            } else {
+                tempoSec = punteggio;
+            }
+            if (tempoSec > peggiorTempo) {
+                peggiorTempo = tempoSec;
+            }
         }
         this.vincitore = vincitore; // Salva il vincitore nella gara
+        // imposta la durata in ore pari al tempo del "last finisher" (se vale)
+        if (peggiorTempo > 0 && haTimingEvents) {
+            this.durata = (float) (peggiorTempo / 3600.0);
+        } else if (!haTimingEvents) {
+            // Per gare senza timing (salti, lanci) genera durata random tra 1 e 4 ore
+            Random rand = new Random();
+            this.durata = 1.0f + rand.nextFloat() * 3.0f;
+        }
     }
 
     /**

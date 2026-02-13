@@ -12,7 +12,10 @@ public class Velocista extends Atleta {
     /**
      * attributi
      */
-    private int velocita;
+    // velocita in km/h (valore usato per calcolare il tempo sui 100m o maratona)
+    private double velocita;
+    // distanza della gara in km (default 0.1 per 100m)
+    private double distanzaKm = 0.1;
     
     /**
      * costruttore di velocista
@@ -31,7 +34,11 @@ public class Velocista extends Atleta {
      */
      @Override
     public double calcolaPunteggio() {
-        return 15 - ((double)this.velocita / 100.0) * 15 - 9.57;
+        // tempo in secondi = distanza (km) / velocita (km/h) * 3600
+        if (velocita <= 0 || distanzaKm <= 0) {
+            return Double.MAX_VALUE;
+        }
+        return (distanzaKm / velocita) * 3600.0;
     }
 
     /**
@@ -40,11 +47,26 @@ public class Velocista extends Atleta {
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();
-        this.velocita = r.nextInt(101);
+        if (distanzaKm >= 42) { // maratona
+            // corridori di maratona medi: 8–20 km/h
+            this.velocita = 8 + r.nextDouble() * 12;
+        } else {
+            // velocità media dei migliori sprinter: 35–45 km/h,
+            // prendiamo un range 25..50 per maggiore variabilità
+            this.velocita = 25 + r.nextDouble() * 25; // km/h
+        }
     }
         
     
     
         
     
+    // getter/setter distance
+    public double getDistanzaKm() {
+        return distanzaKm;
+    }
+
+    public void setDistanzaKm(double distanzaKm) {
+        this.distanzaKm = distanzaKm;
+    }
 }
