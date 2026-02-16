@@ -17,6 +17,7 @@ public class FRMClassifica extends javax.swing.JFrame {
      */
     public FRMClassifica() {
         initComponents();
+        setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }
     
     /**

@@ -117,6 +117,7 @@ public class FRMGara extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreaGaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreaGaraActionPerformed
+        // controllo per far si che sia stato selezionato un tipo di gara
         try {
             if("Seleziona ".equals(cbTipo.getSelectedItem().toString())){
                 javax.swing.JOptionPane.showMessageDialog(this,
@@ -134,28 +135,21 @@ public class FRMGara extends javax.swing.JFrame {
             }
             String tipo = cbTipo.getSelectedItem().toString();
             // la durata iniziale è fittizia, verrà aggiornata da Gara.svolgiGara()
-            m.creaGara(0f, tipo);
+            m.creaGara(tipo);
             javax.swing.JOptionPane.showMessageDialog(this,
                     "Gara creata con successo!",
                     "Info",
                     javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            
+            // svolgi ogni gara
             for(Gara g : m.getListaGare()){
                 g.svolgiGara();
             }
             
-            // Aggiorna la classifica con i dati della nuova gara
+            // Aggiorna la classifica
             aggiornaClassifica();
             
-        } catch (NumberFormatException e) {
-            // SCATTA SE: L'utente scrive "abc" o "12,5" (con virgola invece di punto)
-            javax.swing.JOptionPane.showMessageDialog(this,
-                    "Errore: La durata deve essere un numero valido (usa il punto per i decimali).",
-                    "Errore di Formato",
-                    javax.swing.JOptionPane.ERROR_MESSAGE);
-
         } catch (HeadlessException e) {
-            // SCATTA SE: C'è un errore generico non previsto
+           
             javax.swing.JOptionPane.showMessageDialog(this,
                     "Si è verificato un errore imprevisto: " + e.getMessage(),
                     "Errore",
@@ -165,19 +159,21 @@ public class FRMGara extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreaGaraActionPerformed
 
     private void btnClassificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificaActionPerformed
-         FRMClassifica finestra = new FRMClassifica();
+        // apri la finestra della classifica 
+        FRMClassifica finestra = new FRMClassifica();
          finestra.setClassifica(generaTestoClassifica());
          finestra.setVisible(true);
     }//GEN-LAST:event_btnClassificaActionPerformed
     
     /**
-     * Metodo per generare il testo della classifica con tutti i dati delle gare
+     * metodo che costruisce la classifica in modo leggibile
+     * @return la stringa da assegnare al pannelo della classifica
      */
     private String generaTestoClassifica() {
         StringBuilder sb = new StringBuilder();
-        sb.append("=".repeat(80)).append("\n");
+        sb.append("=".repeat(200)).append("\n");
         sb.append("CLASSIFICA GENERALE DEL MEETING\n");
-        sb.append("=".repeat(80)).append("\n\n");
+        sb.append("=".repeat(200)).append("\n\n");
         
         if (m.getListaGare().isEmpty()) {
             sb.append("Nessuna gara creata ancora.\n");
@@ -185,11 +181,11 @@ public class FRMGara extends javax.swing.JFrame {
             for (int i = 0; i < m.getListaGare().size(); i++) {
                 Gara g = m.getListaGare().get(i);
                 sb.append("GARA ").append(i + 1).append("\n");
-                sb.append("-".repeat(80)).append("\n");
+                sb.append("-".repeat(200)).append("\n");
                 sb.append("Tipologia: ").append(g.getTipologia()).append("\n");
                 sb.append("Durata: ").append(g.getDurata()).append(" ore\n\n");
                 
-                // Ordina gli atleti per punteggio (crescente, minore è meglio)
+                // Ordina gli atleti per punteggio 
                 ArrayList<Atleta> atleti = new ArrayList<>(g.getListaAtleti());
                 atleti.sort((a1, a2) -> Double.compare(a1.calcolaPunteggio(), a2.calcolaPunteggio()));
                 
@@ -231,7 +227,7 @@ public class FRMGara extends javax.swing.JFrame {
                 sb.append("\n");
             }
         }
-        sb.append("=".repeat(80)).append("\n");
+        sb.append("=".repeat(200)).append("\n");
         return sb.toString();
     }
     
@@ -240,8 +236,7 @@ public class FRMGara extends javax.swing.JFrame {
      */
     private void aggiornaClassifica() {
         synchronized (this) {
-            // Se la finestra della classifica è già aperta, aggiornala
-            // Altrimenti, il testo sarà disponibile quando l'utente apre la classifica
+            
         }
     }
 

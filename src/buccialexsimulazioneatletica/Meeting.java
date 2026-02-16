@@ -14,19 +14,20 @@ public class Meeting {
      */
     private ArrayList<Gara> listaGare;
     
-    
+    /**
+     * costruttore di meeting
+     */
     public Meeting(){
         listaGare = new ArrayList<>();
     }
     
     /**
      * Metodo che crea la gara
-     * @param durataGara
      * @param tipologia 
      */
-    public void creaGara(Float durataGara, String tipologia){
-        // La logica di popolamento random degli atleti è ora nel costruttore di Gara
-        listaGare.add(new Gara(durataGara, tipologia));
+    public void creaGara(String tipologia){
+        // popola in base alla tipologia grazie al costruttore di gara
+        listaGare.add(new Gara(tipologia));
     }
 
     /**
@@ -39,15 +40,15 @@ public class Meeting {
 
     /**
      * set lista gare
-     * @param listaGare 
+     * @param listaGare lista delle gare
      */
     public void setListaGare(ArrayList<Gara> listaGare) {
         this.listaGare = listaGare;
     }
 
     /**
-     * ritorna la lista di gare create
-     * @return 
+     * override tostring
+     * @return la lista di gare
      */
     @Override
     public String toString() {

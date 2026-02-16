@@ -30,10 +30,11 @@ public class Lanciatore extends Atleta {
     
     /**
      * override del metodo della super classe "calcolaPunteggio"
+     * 
+     * @return il valore della forza 
      */
     @Override
     public double calcolaPunteggio() {
-        // più lunga è la distanza, migliore il punteggio (minore)
         return -forza;
     }
 
@@ -43,7 +44,7 @@ public class Lanciatore extends Atleta {
     @Override
     public void generaValoreCasuale() {
         Random r = new Random();
-        // lancio in giavellotto/peso: prendiamo range 20..90 metri
+        // genero distanza compresa tra un determinato valore con aggiunta di valore random
         forza = 20 + r.nextDouble() * 70;
     }
     

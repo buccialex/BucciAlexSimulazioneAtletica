@@ -26,15 +26,13 @@ public class Gara {
     /**
      * costruttore di gara
      *
-     * @param durata durata della gara
      * @param tipologia tipologia della gara
      */
-    public Gara(Float durata, String tipologia) {
+    public Gara(String tipologia) {
         listaAtleti = new ArrayList<>();
-        this.durata = durata;
         this.tipologia = tipologia;
 
-        // Carica tutti gli atleti dal file
+        // caricamento lista di atleti
         List<String[]> righe = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader("Atleti.txt"))) {
             String riga;
@@ -49,8 +47,8 @@ public class Gara {
         }
 
         // Filtra per specialità coerente con la tipologia
-        // Normalizziamo la tipologia passata dall'interfaccia (es. "Atletica 100m")
-        // affinché corrisponda ai valori nel file Atleti.txt.
+        // questo codice fa si che i valori che vengono presi dalla combo box siano applicabili correttamente alla gara
+        
         String tipoNorm = tipologia.trim().toLowerCase();
         List<String[]> candidati = new ArrayList<>();
         for (String[] col : righe) {
@@ -70,37 +68,37 @@ public class Gara {
                 candidati.add(col);
             }
         }
-        if (candidati.isEmpty()) {
-            // Nel caso in cui non siano stati trovati atleti compatibili loggiamo per aiutare il debug
-            System.err.println("[Gara] nessun atleta trovato per tipologia '" + tipologia + "'." +
-                    " controllare i nomi presenti in Atleti.txt o il valore della combobox.");
-        }
+        
 
-        // Scegli randomicamente un numero di atleti (ad esempio 8)
+        // popola gara con numero di atleti casuale tranne che per la maratona (100 atleti)
         Random rand = new Random();
-        // per la maratona vogliamo più partecipanti (100) se disponibili
         int nAtleti;
         if (tipologia.toLowerCase().contains("maratona")) {
             nAtleti = Math.min(100, candidati.size());
         } else {
             nAtleti = Math.min(8, candidati.size());
         }
+        // così so quali atleti sono stati presi
         Set<Integer> scelti = new HashSet<>();
         while (scelti.size() < nAtleti) {
             int idx = rand.nextInt(candidati.size());
             scelti.add(idx);
         }
+        
+        // creo n atleti tra quelli scelti, in base alla categoria della gara creo atleti della tipologia corretta
         for (int idx : scelti) {
             String[] col = candidati.get(idx);
             String nome = col[0].trim();
             String cognome = col[1].trim();
-            // Crea atleta della specialità giusta in base al tipo selezionato (non alla specialità del file)
+
             String tipoNorm2 = tipologia.trim().toLowerCase();
             if (tipoNorm2.contains("100m") || tipoNorm2.contains("maratona")) {
                 Velocista v = new Velocista(nome, cognome);
                 if (tipoNorm2.contains("maratona")) {
+                    // 46 km per maratona
                     v.setDistanzaKm(46.0);
                 } else {
+                    // 100 metri
                     v.setDistanzaKm(0.1);
                 }
                 listaAtleti.add(v);
@@ -114,6 +112,8 @@ public class Gara {
 
     /**
      * Restituisce una coppia nome/cognome random da una lista di atleti
+     * @param atleti lista degli atleti presi dal file
+     * @return un array di stringhe con i nomi e i cognomi presi
      */
     public static String[] scegliNomeCognomeRandom(List<Atleta> atleti) {
         if (atleti == null || atleti.isEmpty()) {
@@ -124,6 +124,11 @@ public class Gara {
         return new String[]{a.getNome(), a.getCognome()};
     }
 
+    /**
+     * metodo per caricare gli atleti
+     * @param percorsoFile percorso del file contenente gli atleti
+     * @return il contenuto dei file sottoforma di lista
+     */
     public static List<Atleta> caricaAtleti(String percorsoFile) {
         List<Atleta> lista = new ArrayList<>();
 
@@ -137,9 +142,9 @@ public class Gara {
 
                 String nome = col[0].trim();
                 String cognome = col[1].trim();
-                String specialita = col[3].trim().toLowerCase(); // Quarta colonna
+                String specialita = col[3].trim().toLowerCase(); 
 
-                // Decidiamo quale sottoclasse istanziare
+                // questo switch contiene più casi nel caso si voglia implementare diversi tipi di saltatori
                 switch (specialita) {
                     case "100m":
                     case "maratona":
@@ -156,7 +161,6 @@ public class Gara {
                         lista.add(new Saltatore(nome, cognome));
                         break;
                     default:
-                        // Opzionale: un caso generico se la specialità non è mappata
                         break;
                 }
             }
@@ -175,10 +179,9 @@ public class Gara {
         }
         // Determina il vincitore confrontando i punteggi
         Atleta vincitore = null;
-        double migliorPunteggio = Double.MAX_VALUE; // Per gare di tempo, minore è meglio
-        // terreni per calcolo durata gara
-        double peggiorTempo = 0.0; // in secondi
-        boolean haTimingEvents = false; // ha atleti la cui gara si base su tempo?
+        double migliorPunteggio = Double.MAX_VALUE; 
+        double peggiorTempo = 0.0; 
+        boolean tempo = false; 
         
         for (Atleta a : listaAtleti) {
             double punteggio = a.calcolaPunteggio();
@@ -188,12 +191,11 @@ public class Gara {
             }
             // convertiamo in tempo positivo
             double tempoSec;
-            if (a instanceof Velocista) {
-                tempoSec = punteggio; // già in secondi
-                haTimingEvents = true;
+            if (a instanceof Velocista) { // istanceof serve a vedere se l'oggetto istanziato appartiene alla sottoclasse di atleta "Velocista"
+                tempoSec = punteggio;
+                tempo = true; // la gara funziona a tempo
             } else if (a instanceof Saltatore || a instanceof Lanciatore) {
-                // punteggio negativo = -distanza, ma la gara non ha "tempo"
-                // ignoriamo per durata
+                // dato che il tempo non serve lo imposto a 0
                 tempoSec = 0;
             } else {
                 tempoSec = punteggio;
@@ -202,12 +204,12 @@ public class Gara {
                 peggiorTempo = tempoSec;
             }
         }
-        this.vincitore = vincitore; // Salva il vincitore nella gara
-        // imposta la durata in ore pari al tempo del "last finisher" (se vale)
-        if (peggiorTempo > 0 && haTimingEvents) {
-            this.durata = (float) (peggiorTempo / 3600.0);
-        } else if (!haTimingEvents) {
-            // Per gare senza timing (salti, lanci) genera durata random tra 1 e 4 ore
+        this.vincitore = vincitore; 
+        // se la gara ha il tempo imposta il tempo peggiore come durata
+        if (peggiorTempo > 0 && tempo) {
+            this.durata = (float) (peggiorTempo / 3600.0); // per rendere la durata in ore
+        } else if (!tempo) {
+            // genera durata random per le gare che non vanno a tempo
             Random rand = new Random();
             this.durata = 1.0f + rand.nextFloat() * 3.0f;
         }
