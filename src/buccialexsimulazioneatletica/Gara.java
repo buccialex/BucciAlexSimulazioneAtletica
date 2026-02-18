@@ -174,8 +174,17 @@ public class Gara {
      * metodo che avvia lo svolgimento della gare
      */
     public void svolgiGara() {
+        Random r = new Random();
         for (Atleta a : listaAtleti) {
-            a.generaValoreCasuale(); // Genera un valore casuale per ogni atleta
+            a.generaValoreCasuale();
+            
+        }
+        
+        for (Atleta l : listaAtleti){
+            if(l instanceof Lanciatore && this.tipologia.equalsIgnoreCase("lancio del peso")){
+            Lanciatore lanciatore = (Lanciatore) l;
+            lanciatore.setForza(lanciatore.getForza() - r.nextInt(20, 51));
+        }
         }
         // Determina il vincitore confrontando i punteggi
         Atleta vincitore = null;
@@ -215,14 +224,16 @@ public class Gara {
         }
     }
 
+    public Float getDurata() {
+        return durata;
+    }
+
     /**
      * get di Durata
      *
      * @return
      */
-    public double getDurata() {
-        return durata;
-    }
+    
 
     /**
      * set di Durata
@@ -289,3 +300,5 @@ public class Gara {
     }
 
 }
+
+

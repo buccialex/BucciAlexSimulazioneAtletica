@@ -47,6 +47,16 @@ public class Lanciatore extends Atleta {
         // genero distanza compresa tra un determinato valore con aggiunta di valore random
         forza = 20 + r.nextDouble() * 70;
     }
+
+    public double getForza() {
+        return forza;
+    }
+
+    public void setForza(double forza) {
+        this.forza = forza;
+    }
+    
+    
     
     
     
