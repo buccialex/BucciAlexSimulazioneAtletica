@@ -177,13 +177,13 @@ public class Gara {
         Random r = new Random();
         for (Atleta a : listaAtleti) {
             a.generaValoreCasuale();
-            
         }
         
+        // qui abbasso la forza del pesista per rendere realistiche le distanze
         for (Atleta l : listaAtleti){
             if(l instanceof Lanciatore && this.tipologia.equalsIgnoreCase("lancio del peso")){
             Lanciatore lanciatore = (Lanciatore) l;
-            lanciatore.setForza(lanciatore.getForza() - r.nextInt(20, 51));
+            lanciatore.setForza(lanciatore.getForza() - r.nextInt(43, 51));
         }
         }
         // Determina il vincitore confrontando i punteggi

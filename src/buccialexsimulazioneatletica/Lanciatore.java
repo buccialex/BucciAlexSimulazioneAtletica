@@ -48,10 +48,19 @@ public class Lanciatore extends Atleta {
         forza = 20 + r.nextDouble() * 70;
     }
 
+    /**
+     * getter di forza
+     * @return forza
+     */
     public double getForza() {
         return forza;
     }
 
+    /**
+     * utilizzato per abbassare la forza nel caso sia un lanciatore di peso
+     * setter di forza
+     * @param forza forza da inserire
+     */
     public void setForza(double forza) {
         this.forza = forza;
     }

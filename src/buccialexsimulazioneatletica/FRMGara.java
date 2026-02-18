@@ -196,6 +196,7 @@ public class FRMGara extends javax.swing.JFrame {
                     int posizione = 1;
                     for (Atleta a : atleti) {
                         double punteggio = a.calcolaPunteggio();
+                        
                         String nome = a.getNome();
                         String cognome = a.getCognome();
 
@@ -207,6 +208,13 @@ public class FRMGara extends javax.swing.JFrame {
                             valore = String.format("%.2f m", -punteggio);
                         } else if (a instanceof Lanciatore) {
                             valore = String.format("%.2f m", -punteggio);
+                            if(punteggio >= 0){
+                                valore = "fallito";
+                                
+                            }
+                        
+                            
+                            
                         } else {
                             valore = String.format("%.2f", punteggio);
                         }
